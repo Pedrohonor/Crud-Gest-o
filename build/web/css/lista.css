@@ -1,0 +1,77 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    min-height: calc(100vh - 120px);
+    padding: 20px; /* Adiciona espaçamento interno em telas menores */
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    overflow-x: auto; /* Adiciona rolagem horizontal, se necessário */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+.editar-btn {
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.excluir-btn {
+    color: #fff;
+    background-color: #f44336;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    th, td {
+        padding: 8px; /* Reduz o espaçamento interno */
+    }
+
+    .editar-btn, .excluir-btn {
+        font-size: 12px; /* Reduz o tamanho do texto nos botões */
+        padding: 4px 8px; /* Ajusta o espaçamento interno dos botões */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        display: block; /* Permite que a tabela se ajuste para rolagem */
+        overflow-x: auto; /* Adiciona rolagem horizontal para evitar quebra */
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    th, td {
+        padding: 6px; /* Ajusta o espaçamento para telas muito pequenas */
+    }
+
+    .editar-btn, .excluir-btn {
+        font-size: 10px; /* Ajusta o tamanho dos botões para caber na tela */
+        padding: 3px 6px; /* Ajusta o padding dos botões */
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Cadastro</a>
+            <a href="listar.jsp">Listar</a>
+        </nav>
+    </header>
+    <main>
+        <form action="cadastrar.jsp" method="post">
+            <label for="nome">Nome</label>
+            <!-- Validação de nome: apenas letras A-Z e espaços (sem acentos, sem caracteres especiais e sem "ç") -->
+            <input type="text" id="nome" name="nome" pattern="^[A-Za-z ]+$" required title="O nome deve conter apenas letras de A a Z, sem acentos, caracteres especiais ou 'ç' e pode incluir espaços.">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="numero">Número</label>
+            <!-- Validação do número: exatamente 11 caracteres -->
+            <input type="number" id="numero" name="numero" pattern="^\d{11}$" placeholder="11 99999-9999" required title="O número deve ter exatamente 11 dígitos.">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

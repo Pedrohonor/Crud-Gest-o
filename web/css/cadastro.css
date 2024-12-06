@@ -1,0 +1,99 @@
+main {
+    display: flex;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    min-height: calc(100vh - 120px);
+    gap: 20px; /* Espaço mínimo entre os elementos */
+    padding-top: 30px; /* Adiciona espaçamento extra na parte superior */
+}
+
+nav {
+    display: flex; /* Organiza os itens horizontalmente */
+    justify-content: space-between; /* Espaça os itens do menu */
+    align-items: center;
+    background-color: #333; /* Cor de fundo do menu */
+    padding: 10px 20px; /* Espaçamento interno no menu */
+    color: #fff; /* Cor do texto */
+    gap: 15px; /* Espaço entre os itens do menu */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+nav a {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 5px 10px; /* Adiciona espaçamento interno nos links */
+}
+
+nav a:hover {
+    background-color: #555; /* Fundo do link ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas no hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px; /* Reduzindo espaço entre os elementos do formulário */
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Coloca os itens do menu em uma coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    nav a {
+        font-size: 16px; /* Reduz o tamanho da fonte nos links */
+        padding: 8px; /* Reduz o espaçamento interno */
+    }
+
+    form {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        padding: 0 15px; /* Adiciona espaçamento interno lateral */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px; /* Ajusta o espaçamento no menu para telas muito pequenas */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+
+    nav a {
+        font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    form {
+        gap: 8px; /* Reduz o espaçamento entre os elementos do formulário */
+    }
+
+    button {
+        font-size: 14px; /* Ajusta o tamanho do botão */
+        padding: 10px; /* Ajusta o espaçamento interno */
+    }
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    min-height: calc(100vh - 120px);
+    margin-top: 20px; /* Espaço extra abaixo do menu */
+}
+
+.avatar-group {
+    display: flex;
+    flex-direction: column; /* Organiza o texto e a imagem em uma coluna */
+    align-items: center; /* Centraliza o texto e a imagem */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+.avatar-group p {
+    font-size: 3.9rem; /* Ajusta o tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove margens padrão do parágrafo */
+    color: #333; /* Cor do texto */
+    font-family: 'Lilita One', sans-serif; /* Aplica a fonte importada */
+}
+
+
+.avatar-group img {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%; /* Torna a imagem circular */
+}
+
